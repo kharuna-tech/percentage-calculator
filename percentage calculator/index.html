@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage · three calculators</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>
+      Percentage
+      <span>3‑in‑1</span>
+    </h1>
+    <div class="subhead">live results — no buttons, division by zero shows a friendly message</div>
+
+    <div class="grid">
+      <!-- Calculator 1: What is X% of Y? -->
+      <div class="calculator">
+        <div class="calc-title"><i>🔢</i> What is X% of Y?</div>
+        <div class="input-row">
+          <label for="p1-x">X — percentage</label>
+          <input type="number" id="p1-x" value="15" step="any" placeholder="e.g. 15">
+        </div>
+        <div class="input-row">
+          <label for="p1-y">Y — total value</label>
+          <input type="number" id="p1-y" value="200" step="any" placeholder="e.g. 200">
+        </div>
+        <div class="result-area" id="p1-result">
+          <div class="result-main">30</div>
+          <div class="result-sub">15% of 200 = 30</div>
+        </div>
+      </div>
+
+      <!-- Calculator 2: X is what % of Y? -->
+      <div class="calculator">
+        <div class="calc-title"><i>📊</i> X is what % of Y?</div>
+        <div class="input-row">
+          <label for="p2-x">X — part</label>
+          <input type="number" id="p2-x" value="25" step="any" placeholder="e.g. 25">
+        </div>
+        <div class="input-row">
+          <label for="p2-y">Y — whole</label>
+          <input type="number" id="p2-y" value="200" step="any" placeholder="e.g. 200">
+        </div>
+        <div class="result-area" id="p2-result">
+          <div class="result-main">12.5%</div>
+          <div class="result-sub">25 is 12.5% of 200</div>
+        </div>
+      </div>
+
+      <!-- Calculator 3: % change from X to Y -->
+      <div class="calculator">
+        <div class="calc-title"><i>📈</i> % change from X to Y</div>
+        <div class="input-row">
+          <label for="p3-x">X — initial value</label>
+          <input type="number" id="p3-x" value="80" step="any" placeholder="e.g. 80">
+        </div>
+        <div class="input-row">
+          <label for="p3-y">Y — final value</label>
+          <input type="number" id="p3-y" value="100" step="any" placeholder="e.g. 100">
+        </div>
+        <div class="result-area" id="p3-result">
+          <div class="result-main increase">+25%</div>
+          <div class="result-sub">increase from 80 to 100</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <div class="badge live">⚡ updates as you type</div>
+      <div class="badge">÷ 0 → friendly message</div>
+      <div class="badge">✨ no Infinity / NaN</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
